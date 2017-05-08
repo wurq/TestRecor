@@ -17,10 +17,11 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String strPath = Environment.getExternalStoragePublicDirectory(
-                        Environment.DIRECTORY_RINGTONES).getAbsolutePath()+"/audio.m";
-
-                AudioRecordManager.getInstance().startRecord(strPath);
+                RecordActivity.start(MainActivity.this);
+//                String strPath = Environment.getExternalStoragePublicDirectory(
+//                        Environment.DIRECTORY_RINGTONES).getAbsolutePath()+"/audio.m";
+//
+//                AudioRecordManager.getInstance().startRecord(strPath);
             }
         });
 
